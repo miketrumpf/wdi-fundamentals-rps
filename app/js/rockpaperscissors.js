@@ -4,7 +4,7 @@
 'use strict';
 
 function getInput() {
-    console.log("Please choose either 'rock', 'paper', or 'scissors'.")
+    console.log("Please choose either 'rock', 'paper', or 'scissors'.");
     return prompt();
 }
 function randomPlay() {
@@ -32,7 +32,9 @@ function getComputerMove(move) {
     return move;
 }
 
+
 function getWinner(playerMove,computerMove) {
+    
     var winner;
      if (playerMove === computerMove) {
         return "tie";
@@ -61,25 +63,28 @@ function getWinner(playerMove,computerMove) {
          winner = playerMove;
          return winner;
     }
-}
-
-function playToFive() {
-    console.log("Let's play Rock, Paper, Scissors");
-    var playerWins = 0;
-    var computerWins = 0;
     
-while (playerWins < 5 || compuerWins < 5) {
-    if (winner = playerMove) {
-        playerWins ++;
-        console.log("Player wins round. Total so far is player " + playerWins "computer " + computerWins);
-        
-    }
-    else if (winner= computerMove {
-        computerWins ++;
-        console.log("Computer wins round.  Total so far is player ") + playerWins "computer " + computerWins);
-}
+    
     else
 
     return [playerWins, computerWins];
+}
+
+var playerWins = 0;
+var computerWins = 0;
+
+function playToFive() {
+    console.log("Let's play Rock, Paper, Scissors");
+    while (playerWins < 5 || computerWins < 5) {
+    if (winner === playerMove) {
+        playerWins ++;
+        console.log("Player wins round. Total so far is player " + playerWins + "computer " + computerWins);
+        
+    }
+    else if (winner === computerMove) {
+        computerWins ++;
+        console.log("Computer wins round.  Total so far is player " + playerWins + "computer " + computerWins);
+    }
+}
 }
 
